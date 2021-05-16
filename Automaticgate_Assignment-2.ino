@@ -9,37 +9,31 @@ Servo gate;
 void setup() 
   {
   
-  pinMode(trig,OUTPUT);
-  pinMode(echo,INPUT);
-  Serial.begin(9600);
-  gate.attach(11);
-  }
+	pinMode(trig,OUTPUT);
+	pinMode(echo,INPUT);
+	Serial.begin(9600);
+	gate.attach(11);
+	}
 
 void loop()
 {
+  
  if (calc_dis()<100)
-{
+ {
  
-  gate.write(0);
-  Serial.println("The Gate is at 0");
-  delay(1000);
   gate.write(90);
-  Serial.println("The Gate is at 90");
+  Serial.println("The Gate is OPENED");
   delay(1000);
-  gate.write(180);
-  Serial.println("The Gate is at 180");
-  delay(1000);
-  gate.write(0);
-  Serial.println("The Gate is at 0");
-  delay(1000);
-   
-} 
+ 
+  } 
+
   else
-  {
+   {
     gate.write(0);
-    Serial.println("The Gate is opened");
+    Serial.println("The Gate is closed");
     delay(1000);
-  }
+   }
+  
 }
 
 int calc_dis()
