@@ -78,7 +78,7 @@ void loop(){
             
             // Web Page Heading
             client.println("<body><h1>Weather Data</h1>");
-            client.println("<body><p1>City : Hyderabad<br>Date : 20-05-2021<br>Temaprature is 33.2 F<br>Humidity is 58%</p1>");
+            client.println("<body><p1>Temaprature is 33.2 F<br>Humidity is 58%</p1>");
             client.println("</body></html>");
             
             // The HTTP response ends with another blank line
